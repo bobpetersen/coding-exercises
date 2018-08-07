@@ -15,6 +15,8 @@ class IsbnVerifier
     # if a character is X then the value is 10 and returns the 10 as a string
     # iterates through the array and adds the previous amount from the accumulator
     # (% 11) checks to make sure that none of the numbers are a multiple of 11
+    # I feel shaky on this line of code. I works but I'm not sure why.
+    # can't wait for someone on the team to lay it out for me.
     (clean.chars.map { |c| c == 'X' ? 10 : c.to_i }.reverse.map.with_index(1) { |x, i| x * i }.inject(0, :+) % 11).zero?
   end
 end
