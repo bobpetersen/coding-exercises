@@ -9,15 +9,15 @@ class Brackets
   }.freeze
 
   # self defines the method bracket. (string) is the argument it can accept
-  # the stack (this is not an array)
-  # (think of it as verticle, you can only access the top or last)
+  # the stack (think of it as a vertical array in which
+  # you can only access the top or last)
 
   def self.paired?(string)
     stack = []
 
     # loops through each character
-    # if statement to check if it includes a key(opening) bracket
-    # if it does it will push it to the stack
+    # if statement to check includes a key(opening) bracket
+    # it will push it to the stack
 
     string.chars.each do |char|
       if BRACKETS.key?.include?(char)
