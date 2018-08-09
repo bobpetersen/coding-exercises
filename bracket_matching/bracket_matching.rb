@@ -16,9 +16,9 @@ class Brackets
     # if statement to check includes a key(opening) bracket
     # it will push it to the stack
     string.chars.each do |char|
-      if BRACKETS.key?.include?(char)
+      if BRACKETS.key?(char)
         stack.push(char)
-      elsif BRACKETS.value?.include?(char)
+      elsif BRACKETS.value?(char)
         # checks the value(closing) of bracket if it's matches it will
         # pop the openeing bracket off the top of the stack
         return false unless BRACKETS[stack.pop] == char
